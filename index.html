@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shimelis Regassa | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">SR.</div>
+    <div class="nav-links">
+      <a href="#about" onclick="scrollTo('about')">About</a>
+      <a href="#skills" onclick="scrollTo('skills')">Skills</a>
+      <a href="#projects" onclick="scrollTo('projects')">Projects</a>
+      <a href="#testimonials" onclick="scrollTo('testimonials')">Testimonials</a>
+      <a href="#contact" onclick="scrollTo('contact')">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero" id="about">
+    <div class="hero-left">
+      <h1>Hi, I'm<br><span class="accent">Shimelis Regassa</span></h1>
+      <p class="typed-line">I'm a <span class="typed-text" id="typed"></span><span class="cursor">|</span></p>
+      <p class="hero-sub">Passionate CSE student at ASTU building elegant frontends and 
+        sharpening problem-solving skills through competitive programming.
+         I focus on turning concepts into fast, beautifully designed web apps that feel natural to use.</p>
+      <div class="hero-tags">
+        <span class="tag">Frontend Developer</span>
+        <span class="tag">Competitive Programmer</span>
+        <span class="tag">CSE Student</span>
+      </div>
+     <div class="hero-actions">
+  <a href="#projects" class="btn-primary" style="text-decoration: none;">
+    <i class="ti ti-folder"></i> View Projects
+  </a>
+  
+  <a href="mailto:shimelisregassa6@gmail.com" class="btn-secondary" style="text-decoration: none;">
+    <i class="ti ti-mail"></i> Hire Me
+  </a>
+</div>
+    </div>
+
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <img class="avatar-img" src="image/80344f2a33684e108f63b0e10e701cb9.jpg" alt="Shimelis Regassa">
+      <div class="status-dot"></div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">3+</div><div class="stat-label">CP Platforms</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">Projects Built</div></div>
+    <div class="stat"><div class="stat-num">3rd</div><div class="stat-label">Year at ASTU</div></div>
+  </div>
+
+  <section id="skills">
+    <div class="section-label">What I work with</div>
+    <h2>Skills &amp; Technologies</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="ti ti-brand-html5 skill-icon">
+
+      </i><div class="skill-name">HTML5</div><div class="skill-level">
+        <div class="skill-bar" style="width:88%"></div></div></div>
+      <div class="skill-card"><i class="ti ti-brand-css3 skill-icon">
+
+      </i><div class="skill-name">CSS3</div><div class="skill-level">
+        <div class="skill-bar" style="width:82%"></div></div></div>
+      <div class="skill-card"><i class="ti ti-brand-javascript skill-icon">
+
+      </i><div class="skill-name">JavaScript/Java</div><div class="skill-level"><div class="skill-bar" style="width:75%"></div></div></div>
+<div class="skill-card">
+  <i class="ti ti-database skill-icon"></i>
+  <span class="skill-name">Database</span>
+  <div class="skill-level">
+    <div class="skill-bar" style="width: 80%;"></div> 
+  </div>
+</div>
+<div class="skill-card">
+  <i class="ti ti-brand-python skill-icon"></i>
+  <span class="skill-name">Python</span>
+  <div class="skill-level">
+    <div class="skill-bar" style="width: 85%;"></div> 
+  </div>
+</div>
+      <div class="skill-card"><i class="ti ti-code skill-icon"></i><div class="skill-name">C++ / DSA
+
+      </div><div class="skill-level"><div class="skill-bar" style="width:72%"></div></div></div>
+
+    </div>
+    <div class="section-label" style="margin-top:2.5rem;">Competitive Programming</div>
+    <div class="cp-grid">
+      <div class="cp-card" onclick="window.open('https://codeforces.com/profile/shime')"><i class="ti ti-trophy cp-icon">
+
+      </i><div class="cp-platform">Codeforces</div><div class="cp-handle">ShimelisRegassa</div></div>
+      <div class="cp-card" onclick="window.open('https://leetcode.com/u/shimexR/')"><i class="ti ti-code cp-icon">
+
+      </i><div class="cp-platform">LeetCode</div><div class="cp-handle">ShimelisRegassa</div></div>
+      <div class="cp-card" onclick="window.open('https://www.hackerrank.com/profile/shimelisregassa6')">
+        <i class="ti ti-terminal cp-icon"></i><div class="cp-platform">HackerRank</div><div class="cp-handle">ShimelisRegassa</div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-label">What I've built</div>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-header"><div class="project-icon-wrap"><i class="ti ti-checkbox" style="font-size:20px;color:#7F77DD">
+
+        </i></div><div><div class="project-title">To-Do List App</div>
+        <div class="badge-live">&#9679; Live</div></div></div>
+        <p class="project-desc">A clean, responsive task management app built with HTML, CSS, and JavaScript — no frameworks,
+           no dependencies. Users can add, complete, and delete tasks with instant feedback. 
+          All tasks persist across sessions using localStorage, so nothing is lost on page refresh..</p>
+        <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
+        <a class="project-link" href="https://github.com/ShimelisRegassa/-TO-DO-LIST-FIRST-PROJECT" target="_blank"><i class="ti ti-brand-github"></i> View Source <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-icon-wrap" style="background:rgba(216,90,48,0.15)"><i class="ti ti-layout-dashboard" style="font-size:20px;color:#D85A30">
+
+        </i></div><div><div class="project-title">AgroDigital</div><div class="badge-github"><i class="ti ti-brand-github" style="font-size:11px"></i> GitHub only</div></div></div>
+        <p class="project-desc"A>A client-side digital agriculture platform built with pure HTML, CSS, and Vanilla JavaScript. 
+          Features user authentication, per-farmer data storage using localStorage, 
+          a full admin dashboard, and 8 functional modules including crop advisor, market prices, farm diary, and 
+          transport requests — with no backend or framework..</p>
+        <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
+        <a class="project-link" href="https://github.com/ShimelisRegassa/Digital-Agriculture" target="_blank"><i class="ti ti-brand-github"></i> View Source <i class="ti ti-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-label">Kind words</div>
+    <h2>What classmates say</h2>
+    <div class="testimonials-grid">
+      <div class="tcard">
+        <div class="tcard-quote">"</div>
+        <p class="tcard-text">Shimelis is one of the most dedicated developers I know at ASTU. His ability to build clean, functional UIs while also excelling in competitive programming is truly impressive.</p>
+        <div class="tcard-footer"><div class="tcard-avatar" style="background:linear-gradient(135deg,#534AB7,#7F77DD);">KA</div><div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tcard-name">Kumela Adugna</div><div class="tcard-role">CSE Student &middot; ASTU</div></div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-quote">"</div>
+        <p class="tcard-text">Working alongside Shimelis has been a pleasure. He has a sharp eye for design and always delivers well-structured, readable code. A true team player and a rising talent in our class.</p>
+        <div class="tcard-footer"><div class="tcard-avatar" style="background:linear-gradient(135deg,#D85A30,#EF9F27);">ST</div><div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tcard-name">Simera Tesfaye</div><div class="tcard-role">CSE Student &middot; ASTU</div></div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-quote">"</div>
+        <p class="tcard-text">Shimelis approaches every problem with creativity and persistence. Whether it's a coding challenge or a frontend task, he never gives up until he finds the best solution.</p>
+        <div class="tcard-footer"><div class="tcard-avatar" style="background:linear-gradient(135deg,#0F6E56,#1D9E75);">SA</div><div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tcard-name">Sintayehu Asnake</div><div class="tcard-role">CSE Student &middot; ASTU</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-label">Let's connect</div>
+    <h2>Get in touch</h2>
+    <p class="contact-intro">Open to collaborations, internships, and exciting projects. Feel free to reach out!</p>
+    
+    <div class="contact-split-container">
+      <form class="contact-form-wrapper" action="https://formspree.io/f/your-form-id-here" method="POST" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="form-name">Name</label>
+          <input type="text" id="form-name" name="name" placeholder="Shimelis Regassa" required />
+        </div>
+        <div class="form-group">
+          <label for="form-email">Email Address</label>
+          <input type="email" id="form-email" name="email" placeholder="shimelisregassa@gmail.com" required />
+        </div>
+        <div class="form-group">
+          <label for="form-message">Your Message / Feedback</label>
+          <textarea id="form-message" name="message" rows="5" placeholder="Leave your feedback or project proposal here..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit-form">Send Message</button>
+      </form>
+
+      <div class="contact-grid">
+        <div class="contact-card" onclick="window.location.href='mailto:shimelisregassa6@gmail.com'"><i class="ti ti-mail contact-icon"></i>
+          <div><div class="contact-label">Email</div><div class="contact-value">shimelisregassa6@gmail.com</div></div></div>
+        <div class="contact-card" onclick="window.open('https://github.com/ShimelisRegassa')"><i class="ti ti-brand-github contact-icon">
+
+        </i><div><div class="contact-label">GitHub</div><div class="contact-value">ShimelisRegassa</div></div></div>
+        <div class="contact-card" onclick="window.open('https://www.linkedin.com/in/shimelis-regassa-8391563b1/')"><i class="ti ti-brand-linkedin contact-icon">
+
+        </i><div><div class="contact-label">LinkedIn</div><div class="contact-value">Shimelis Regassa</div></div></div>
+        <div class="contact-card" onclick="window.open('https://t.me/Redeemed2334')"><i class="ti ti-brand-telegram contact-icon">
+
+        </i><div><div class="contact-label">Telegram</div><div class="contact-value">@ShimelisRegassa</div></div></div>
+        <div class="contact-card" onclick="window.open('https://www.facebook.com/profile.php?id=61566555606915')">
+          <i class="ti ti-brand-facebook contact-icon"></i><div><div class="contact-label">Facebook</div><div class="contact-value">Shimelis Regassa</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Designed &amp; built by <span>Shimelis Regassa</span> &middot; 2026 &middot; ASTU CSE</footer>
+  <script src="script.js"></script>
+</body>
+</html>
