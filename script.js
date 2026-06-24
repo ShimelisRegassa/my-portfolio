@@ -1,4 +1,14 @@
 /* =====================
+   HAMBURGER MENU (MOBILE)
+======================== */
+function closeMobileMenu() {
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn) btn.classList.remove('open');
+  if (menu) menu.classList.remove('open');
+}
+
+/* =====================
    SMOOTH SCROLL
 ======================== */
 function scrollTo(id) {
@@ -78,7 +88,7 @@ function revealOnScroll() {
 function activeNavOnScroll() {
   const sectionIds = ['about', 'skills', 'projects', 'testimonials', 'contact'];
   const navLinks = document.querySelectorAll('.nav-links a');
-  const tabLinks = document.querySelectorAll('.mobile-tab-bar a');
+  const menuLinks = document.querySelectorAll('.mobile-menu a');
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -97,7 +107,7 @@ function activeNavOnScroll() {
       }
     });
 
-    tabLinks.forEach(link => {
+    menuLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('data-section') === current) {
         link.classList.add('active');
@@ -158,4 +168,20 @@ document.addEventListener('DOMContentLoaded', () => {
   revealOnScroll();
   activeNavOnScroll();
   animateSkillBars();
-});  
+
+  // Hamburger toggle
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+  }
+});

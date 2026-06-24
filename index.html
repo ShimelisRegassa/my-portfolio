@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <nav>
+  <nav id="mainNav">
     <div class="nav-logo">SR.</div>
     <div class="nav-links">
       <a href="#about" onclick="scrollTo('about')">About</a>
@@ -18,7 +18,32 @@
       <a href="#testimonials" onclick="scrollTo('testimonials')">Testimonials</a>
       <a href="#contact" onclick="scrollTo('contact')">Contact</a>
     </div>
+    <!-- Hamburger button: only visible on mobile via CSS -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <!-- Mobile dropdown menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-section="about" onclick="closeMobileMenu(); scrollTo('about')">
+      <i class="ti ti-user"></i> About
+    </a>
+    <a href="#skills" data-section="skills" onclick="closeMobileMenu(); scrollTo('skills')">
+      <i class="ti ti-tool"></i> Skills
+    </a>
+    <a href="#projects" data-section="projects" onclick="closeMobileMenu(); scrollTo('projects')">
+      <i class="ti ti-folder"></i> Projects
+    </a>
+    <a href="#testimonials" data-section="testimonials" onclick="closeMobileMenu(); scrollTo('testimonials')">
+      <i class="ti ti-quote"></i> Testimonials
+    </a>
+    <a href="#contact" data-section="contact" onclick="closeMobileMenu(); scrollTo('contact')">
+      <i class="ti ti-mail"></i> Contact
+    </a>
+  </div>
 
   <div class="hero" id="about">
     <div class="hero-left">
