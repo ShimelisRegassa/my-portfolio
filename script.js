@@ -78,6 +78,7 @@ function revealOnScroll() {
 function activeNavOnScroll() {
   const sectionIds = ['about', 'skills', 'projects', 'testimonials', 'contact'];
   const navLinks = document.querySelectorAll('.nav-links a');
+  const tabLinks = document.querySelectorAll('.mobile-tab-bar a');
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -92,6 +93,13 @@ function activeNavOnScroll() {
     navLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+
+    tabLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('data-section') === current) {
         link.classList.add('active');
       }
     });
@@ -150,4 +158,4 @@ document.addEventListener('DOMContentLoaded', () => {
   revealOnScroll();
   activeNavOnScroll();
   animateSkillBars();
-});
+});  
