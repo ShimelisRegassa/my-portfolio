@@ -1114,23 +1114,20 @@ footer span {
 
 /* --- Mobile: Position the menu correctly --- */
 @media (max-width: 900px) {
-  
-  nav {
-    position: relative;
-  }
+  /* ... your other mobile styles ... */
 
   .mobile-menu {
-    display: none;
+    display: none;        /* Hidden by default */
     flex-direction: column;
     width: 100%;
-    /* Remove 'position: absolute' if you want it to push the hero down */
-    /* If you want it to float, keep 'absolute' but ensure z-index is correct */
     background: #07070a;
     border-bottom: 1px solid rgba(127,119,221,0.2);
+    /* REMOVED: position: absolute; */
+    /* REMOVED: top: 100%; */
     z-index: 999;
   }
 
   .mobile-menu.open {
-    display: flex;
+    display: flex; /* Now it acts like a normal block, pushing hero down */
   }
 }
