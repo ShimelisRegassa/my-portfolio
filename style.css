@@ -46,16 +46,31 @@ nav {
   letter-spacing: -0.5px; 
 }
 
-/* Hamburger hidden on desktop, shown only on mobile via media query */
+
 .hamburger-btn {
   display: none;
 }
 
 /* Mobile menu hidden on desktop */
+
 .mobile-menu {
   display: none;
 }
 
+/* 2. Only show and position the menu on mobile screens */
+@media (max-width: 768px) {
+  .mobile-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* This makes it float */
+    top: 60px;          /* Adjust this to match your Nav bar height */
+    left: 0;
+    width: 100%;
+    background: #07070a;
+    z-index: 999;
+    border-bottom: 1px solid rgba(127,119,221,0.2);
+  }
+}
 .nav-links { 
   display: flex; 
   gap: 2rem; 
