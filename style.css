@@ -1102,7 +1102,7 @@ footer span {
     padding: 1.25rem 1rem; 
   }
 }
-/* --- Desktop: Force the mobile menu to stay hidden --- */
+
 @media (min-width: 901px) {
   .mobile-menu {
     display: none !important;
@@ -1114,16 +1114,25 @@ footer span {
 
 /* --- Mobile: Position the menu correctly --- */
 @media (max-width: 900px) {
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #07070a;
-    border-bottom: 1px solid rgba(127,119,221,0.2);
-    /* Ensure position is NOT absolute */
-    position: static; 
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
+  
+  .mobile-menu {
+    display: none;        /* Hidden initially */
+    flex-direction: column;
+    width: 100%;
+    background: #07070a;  /* Adjust to match your theme */
+    border-bottom: 1px solid rgba(127,119,221,0.2);
+    position: static;     /* THIS IS KEY: Makes it push content instead of floating */
+    z-index: 999;
+  }
+
+  
   .mobile-menu.open {
     display: flex;
   }
