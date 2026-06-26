@@ -162,37 +162,26 @@ function injectRevealStyles() {
 /* =====================
    INIT
 ======================== */
-// Add this helper function outside your event listener
-function closeMobileMenu() {
+document.addEventListener('DOMContentLoaded', () => {
+  type();
+  injectRevealStyles();
+  revealOnScroll();
+  activeNavOnScroll();
+  animateSkillBars();
+
+  // Hamburger toggle
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
-  if (btn) btn.classList.remove('open');
-  if (menu) menu.classList.remove('open');
-}
-
-// Hamburger toggle (inside your DOMContentLoaded)
-const btn = document.getElementById('hamburgerBtn');
-const menu = document.getElementById('mobileMenu');
-
-if (btn && menu) {
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    btn.classList.toggle('open');
-    menu.classList.toggle('open');
-  });
-
-  // Close when a link inside the menu is clicked
-  const menuLinks = menu.querySelectorAll('a');
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      closeMobileMenu();
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
     });
-  });
-
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      closeMobileMenu();
-    }
-  });
-}
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+  }
+});

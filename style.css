@@ -46,31 +46,16 @@ nav {
   letter-spacing: -0.5px; 
 }
 
-
+/* Hamburger hidden on desktop, shown only on mobile via media query */
 .hamburger-btn {
   display: none;
 }
 
 /* Mobile menu hidden on desktop */
-
 .mobile-menu {
   display: none;
 }
 
-/* 2. Only show and position the menu on mobile screens */
-@media (max-width: 768px) {
-  .mobile-menu.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute; /* This makes it float */
-    top: 60px;          /* Adjust this to match your Nav bar height */
-    left: 0;
-    width: 100%;
-    background: #07070a;
-    z-index: 999;
-    border-bottom: 1px solid rgba(127,119,221,0.2);
-  }
-}
 .nav-links { 
   display: flex; 
   gap: 2rem; 
@@ -111,7 +96,7 @@ nav {
    3. HERO / ABOUT SECTION — tighter gaps, avatar shifted up
    ========================================================================== */
 .hero { 
-  padding: 3.6rem 4rem;           /* reduced from 5rem */
+  padding: 3rem 4rem;           /* reduced from 5rem */
   display: grid; 
   grid-template-columns: 1.2fr 0.8fr; 
   gap: 4rem; 
@@ -377,7 +362,7 @@ nav {
 }
 
 .stat { 
-  padding: 1.2rem 2rem;         
+  padding: 1.5rem 2rem;         
   text-align: center; 
   border-right: 0.5px solid rgba(127,119,221,0.15); 
   transition: background 0.3s; 
@@ -1100,40 +1085,5 @@ footer span {
   
   .contact-form-wrapper { 
     padding: 1.25rem 1rem; 
-  }
-}
-
-@media (min-width: 901px) {
-  .mobile-menu {
-    display: none !important;
-  }
-  .hamburger-btn {
-    display: none !important;
-  }
-}
-
-/* --- Mobile: Position the menu correctly --- */
-@media (max-width: 900px) {
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  
-  .mobile-menu {
-    display: none;        /* Hidden initially */
-    flex-direction: column;
-    width: 100%;
-    background: #07070a;  /* Adjust to match your theme */
-    border-bottom: 1px solid rgba(127,119,221,0.2);
-    position: static;     /* THIS IS KEY: Makes it push content instead of floating */
-    z-index: 999;
-  }
-
-  
-  .mobile-menu.open {
-    display: flex;
   }
 }
